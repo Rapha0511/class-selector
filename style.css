@@ -1,0 +1,40 @@
+body{
+    width: 80%;
+    margin: auto;
+
+}
+
+#people{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(15,auto);
+    text-align: center;
+}
+
+#people > div{
+    margin: 10px;
+    background-color: red;
+
+}
+
+#people ,.container > div{
+    background-color: gray;
+
+}
+
+.container > div{
+    width: 30%;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;   
+}
+
+.material-icons{
+    font-size:80px;
+}
+
+
+
