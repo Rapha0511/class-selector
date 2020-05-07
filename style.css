@@ -11,13 +11,14 @@ body{
     text-align: center;
 }
 
-#people > div{
+.personnage{
     margin: 10px;
-    background-color: red;
-
+    width: 70px;
+    height: 60px;
+    border-radius: 15px;
 }
 
-#people ,.container > div{
+#people ,.container > div ,.container > div > div {
     background-color: gray;
 
 }
@@ -27,13 +28,21 @@ body{
     text-align: center;
 }
 
+.container > div > div{
+    display: flex;
+	justify-content:center;	
+    flex-wrap: wrap;
+}
+
 .container{
     display: flex;
-    justify-content: space-around;   
+    justify-content: space-around;
+    height: 80px;
+    
 }
 
 .material-icons{
-    font-size:80px;
+    font-size:60px;
 }
 
 

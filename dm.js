@@ -56,7 +56,8 @@ for (let i = 0 ; i <= 29; i++ ){                            // boucle pour crÃ©Ã
     
     var person = document.createElement("div");             // creation de l'element div
     person.setAttribute('id',i);                            // id unique correspondant a l'index de la boucle(de 1 a 30)
-    person.setAttribute('class',"personnage");              // ajout de la class 'personnage', commune a tout les elements
+    person.classList.add("personnage");              // ajout de la class 'personnage', commune a tout les elements
+    person.style.cursor = "pointer";
     person.style.backgroundColor = getRandomColor();        // on set la couleur random en utilisant la fction qui retoune une couleur
     peopleContainer.append(person);                         // on ajoute  la div cree juste en tant qu'enfant de la div peopleContainer
 
@@ -88,10 +89,12 @@ for (let i = 0 ; i <= 29; i++ ){                            // boucle pour crÃ©Ã
 
 
 
-var marketing = document.getElementById('mkt')
-var developpement = document.getElementById('dev')
+var marketing = document.getElementById('mkt');
+var developpement = document.getElementById('dev');
+var design = document.getElementById('design');
 
-monFormulaire.addEventListener('submit',function(e){
+
+monFormulaire.addEventListener('submit',function(e){    
     e.preventDefault();
     var div_du_personnage = this.parentNode;   // div parent du formulaire
     var valeur_du_select = monFormulaire.firstChild.value    // valeur du select enfant du formulaire
@@ -102,61 +105,10 @@ monFormulaire.addEventListener('submit',function(e){
         marketing.append(div_du_personnage);
     }else if(valeur_du_select === 'developpement'){
         developpement.append(div_du_personnage);
+    }else if (valeur_du_select === "design"){
+        design.append(div_du_personnage);
     }
+    this.style.display ="none";
+    this.reset();
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var aaa = document.getElementsByClassName("personnage"); // recuperation des div contenant les personnages
-
-// for(var i = 0; i < aaa.length; i++){
-
-//     aaa[i].addEventListener('mousedown',function(event){ // gÃ©rer le click droit
-//         if(event.button == 2){                
-//             console.log(this)          // si le bouton est le bouton droit (0 = gauche , 1 = molette, 2 droit)
-//             this.append(monFormulaire);                 // on ajoute le formulaire 
-//             monFormulaire.style.display = "flex";
-//             monFormulaire.style.position = "absolute";
-//             monFormulaire.style.top = event.clientY + "px";        
-//             monFormulaire.style.left = event.clientX + "px";                
-//             var orientation = document.getElementById('orientation');
-
-//         }
-
-
-
-//     })
-
-// }
-
-
-
-
-
-
-
-
-
-
-// monFormulaire.addEventListener('submit',function(event){            // evenement submit du formulaire
-//     event.preventDefault();
-//     var div_du_personnage = this.parentNode;                        // on recupere la div parent du formulaire, on peut recuperer l'id en ajoutant  .id
-
-    
-// })
-
-
-
-
 
