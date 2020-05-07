@@ -7,7 +7,7 @@ body{
 #people{
     margin-bottom: 50px;
     display: grid;
-    grid-template-columns: repeat(15,auto);
+    grid-template-columns: repeat(auto-fill,100px);
     text-align: center;
 }
 
