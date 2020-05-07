@@ -9,6 +9,7 @@ body{
     display: grid;
     grid-template-columns: repeat(auto-fill,100px);
     text-align: center;
+    justify-items: center;
 }
 
 .personnage{
